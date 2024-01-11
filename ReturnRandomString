@@ -1,0 +1,14 @@
+    public string ReturnNewSaveKey()
+    {
+        string availChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890`~!@#$%^&*()/*-[]{}|";
+        string newID = "";
+
+        for (int length = 0; length < 16; length++)
+        {
+            char randomCharacter = availChars[Random.Range(0, availChars.Length)];
+            newID += randomCharacter.ToString();
+
+        }
+
+        return newID;
+    }
